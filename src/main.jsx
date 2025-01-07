@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import {
   createBrowserRouter,
+  data,
   RouterProvider,
 } from 'react-router-dom';
 import Root from './Layouts/Root/Root.jsx';
@@ -18,11 +19,16 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />,
         loader: () => {
-          fetch('../src/Deta/news.json')
+          return fetch('../src/Deta/news.json')
             .then(res => res.json())
             .then(data => {
               console.log(data);
+              return data;
             })
+            .catch(error => {
+              console.error("Error fetching data:", error);
+              return {};
+            });
         }
       },
     ]

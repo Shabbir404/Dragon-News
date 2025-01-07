@@ -2,11 +2,11 @@ import '../../Coustom-styles/AllCatagoryCss/AllCatagory.css';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const AllCatagory = () => {
-    const UserData = useLoaderData();
-    console.log(UserData);
+    const data = useLoaderData([0]);
+    console.log(data);
 
     return (
-        <div>
+        <div >
             <ul className="text-2xl text-black font-bold">
                 All Categories
                 <div className="ml-2.5 text-lg font-medium mt-5 text-center">
@@ -39,7 +39,15 @@ const AllCatagory = () => {
                     </li>
                 </div>
             </ul>
-            <h1>nothing</h1>
+            <div className=''>
+                {data.slice(0, 3).map((item, i) => (
+                    <div key={i}>
+                        <h1 className='font-semibold w-4/6 text-gray-700'>{item.title}</h1>
+                        <img className='size-auto mt-6' src={item.thumbnail_url} alt={item.title} width={200} />
+                        <p className='mt-2'>{item.author.published_date}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

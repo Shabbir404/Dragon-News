@@ -1,3 +1,4 @@
+import { useLoaderData } from 'react-router-dom';
 import '../Coustom-styles/HomeCss/home.css'
 import AllCatagory from '../Layouts/AllCatagory/AllCatagory';
 import LeftContainer from '../Layouts/Container/LeftContainer/LeftContainer';
@@ -23,14 +24,14 @@ const Home = () => {
                 {/* latest news flex end.. */}
             </div>
             <MainHomeHeader></MainHomeHeader>
-
             <div className="mt-5 grid w-10/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div>
                     <AllCatagory />
                 </div>
-
                 <MainHome />
                 <LeftContainer />
+
+                <h1></h1>
 
             </div>
 
