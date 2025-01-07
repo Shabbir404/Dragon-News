@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal; 
+    color: white;
+  }
+  .bg-color{
+    background-color:#D72050;
+  }
+  .div-bg {
+    background-color: #f3f3f3;
+  }
+
+
+  /* scrolling news style and animation */
+
+  /* Container for the news ticker */
+.news-ticker-container {
+  width: 100%;
+  overflow: hidden; /* Hide the overflowed part of the ticker */
+  background-color: #f3f3f3; /* Dark background color for better contrast */
+  color: #403F3F; /* White text color */
+  font-size: 1.5rem; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  padding: 10px 0; /* Padding for spacing */
+  text-align: center; /* Center the text */
+}
+
+/* News ticker text */
+.news-ticker {
+  display: inline-block;
+  white-space: nowrap; /* Prevent line breaks */
+  animation: ticker 28s linear infinite; /* Apply the ticker animation */
+}
+
+/* Animation to scroll the text */
+@keyframes ticker {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left */
+  }
+}
