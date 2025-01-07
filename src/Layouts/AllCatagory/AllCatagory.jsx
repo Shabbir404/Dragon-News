@@ -1,5 +1,6 @@
 import '../../Coustom-styles/AllCatagoryCss/AllCatagory.css';
 import { Link, useLoaderData } from 'react-router-dom';
+import { CiCalendarDate } from "react-icons/ci";
 
 const AllCatagory = () => {
     const data = useLoaderData([0]);
@@ -44,7 +45,10 @@ const AllCatagory = () => {
                     <div key={i}>
                         <h1 className='font-semibold w-4/6 text-gray-700'>{item.title}</h1>
                         <img className='size-auto mt-6' src={item.thumbnail_url} alt={item.title} width={200} />
-                        <p className='mt-2'>{item.author.published_date}</p>
+                        <div className='flex'>
+                            <CiCalendarDate className='mt-2 text-2xl'></CiCalendarDate>
+                            <p className='mt-2 font-thin ml-2'>{item.author.published_date}</p>
+                        </div>
                     </div>
                 ))}
             </div>
