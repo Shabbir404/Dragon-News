@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Root from './Layouts/Root/Root.jsx';
 import Home from './Pages/Home.jsx';
+import AllCatagory from './Layouts/AllCatagory/AllCatagory.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,7 +16,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: async () => {
+          const res = await fetch('/DragonNews/news.json');
+          return res.json();
+        }
       }
     ]
   },

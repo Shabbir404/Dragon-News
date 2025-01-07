@@ -1,23 +1,59 @@
-
+import '../../Coustom-styles/AllCatagoryCss/AllCatagory.css'
+import { Link, useLoaderData } from 'react-router-dom';
 
 const AllCatagory = () => {
+
+    const allDeta = useLoaderData();
+    const {
+        _id,
+        others_info: { is_todays_pick, is_trending },
+        category_id,
+        rating: { number: ratingNumber, badge: ratingBadge },
+        total_view,
+        title,
+        author: { name: authorName, published_date, img: authorImg },
+        thumbnail_url,
+        image_url,
+        details
+    } = useLoaderData();
+
+
     return (
         <div>
             <div>
-                <ul className="text-2xl text-black font-bold"> All Catagory
-                    <div className="ml-2.5 text-lg font-medium">
-                        <li className="mt-2">Breaking News</li>
-                        <li className="mt-2">National News</li>
-                        <li className="mt-2">Regular News</li>
-                        <li className="mt-2">International News</li>
-                        <li className="mt-2">Sports</li>
-                        <li className="mt-2">Entartainment</li>
-                        <li className="mt-2">Culture</li>
-                        <li className="mt-2">Arts</li>
-                        <li className="mt-2">All News</li>
+                <ul className="text-2xl text-black font-bold">
+                    All Category
+                    <div className="ml-2.5 text-lg font-medium mt-5 text-center">
+                        <li className="ml-2 text-color p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/breaking-news">Breaking News</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/national-news">National News</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/regular-news">Regular News</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/international-news">International News</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/sports">Sports</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/entertainment">Entertainment</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/culture">Culture</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/arts">Arts</Link>
+                        </li>
+                        <li className="ml-2 p-4 mr-40 text-gray-700 rounded-md">
+                            <Link to="/all-news">All News</Link>
+                        </li>
                     </div>
-
                 </ul>
+
             </div>
         </div>
     );
