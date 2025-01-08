@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { CiBookmark, CiShare2 } from "react-icons/ci";
+import { CiBookmark, CiShare2, CiStar, } from "react-icons/ci";
+import { FaStar } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import '../../Coustom-styles/MainHomeCss/Main-home-css.css';
 
 const MainHome = () => {
@@ -45,34 +47,13 @@ const MainHome = () => {
                             {item.title}
                         </h1>
                         <img
-                            className="w-full h-64 object-cover"
+                            className="w-full h-64 object-cover p-2 rounded-lg"
                             src={item.thumbnail_url}
                             alt={item.title}
                         />
 
                         {/* Author Info and Details Section */}
                         <div className="p-4">
-                            <div className="flex items-center justify-between">
-                                {/* Author Details */}
-
-
-                                {/* Rating and Views */}
-                                <div className="flex items-center gap-4">
-                                    {/* Rating */}
-                                    <div className="flex items-center gap-1">
-                                        {/* <Star className="w-5 h-5 text-yellow-400 fill-current" /> */}
-                                        <span className="text-sm font-medium text-gray-600">
-                                            {item.rating.number}
-                                        </span>
-                                    </div>
-
-                                    {/* Views */}
-                                    <div className="text-gray-600">
-                                        <span className="font-medium">{item.total_view}</span> views
-                                    </div>
-                                </div>
-                            </div>
-
                             {/* News Description */}
                             <p className="mt-4 text-gray-600 line-clamp-3">
                                 {item.details}
@@ -80,9 +61,36 @@ const MainHome = () => {
 
                             {/* Read More Button */}
                             <div className="mt-4">
-                                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                                <button className=" text-orange-600 font-semibold hover:text-orange-700 transition-colors duration-200">
                                     Read More
                                 </button>
+                            </div>
+                            <hr />
+                            {/*total post */}
+
+                            <div className="mt-2 px-2">
+                                <div className="flex items-center justify-between">
+                                    {/* Views - Left Side */}
+
+                                    <div className="flex items-center gap-2">
+                                        <div className="flex">
+                                            <FaStar className="w-5 h-5 text-yellow-400" />
+                                            <FaStar className="w-5 h-5 text-yellow-400" />
+                                            <FaStar className="w-5 h-5 text-yellow-400" />
+                                            <FaStar className="w-5 h-5 text-yellow-400" />
+                                        </div>
+                                        <span className="text-md font-medium text-gray-600">
+                                            {item.rating.number}
+                                        </span>
+                                    </div>
+
+                                    {/* Rating - Right Side */}
+
+                                    <div className="text-gray-600 flex items-center gap-2">
+                                        <FaEye className="w-6 h-6 text-gray-600" />
+                                        <span className="font-medium">{item.total_view}</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
