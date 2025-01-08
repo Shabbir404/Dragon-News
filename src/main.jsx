@@ -22,7 +22,7 @@ const router = createBrowserRouter([
           return fetch('../src/Deta/news.json')
             .then(res => res.json())
             .then(data => {
-              console.log(data);
+              // console.log(data);
               return data;
             })
             .catch(error => {

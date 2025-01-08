@@ -24,15 +24,16 @@ const Home = () => {
                 {/* latest news flex end.. */}
             </div>
             <MainHomeHeader></MainHomeHeader>
-            <div className="mt-5 grid w-10/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div>
+            <div className="mt-5 grid w-10/12 mx-auto grid-cols-1 md:grid-cols-12 gap-4">
+                <div className="md:col-span-3">
                     <AllCatagory />
                 </div>
-                <MainHome />
-                <LeftContainer />
-
-                <h1></h1>
-
+                <div className="md:col-span-6">
+                    <MainHome />
+                </div>
+                <div className="md:col-span-3">
+                    <LeftContainer />
+                </div>
             </div>
 
 

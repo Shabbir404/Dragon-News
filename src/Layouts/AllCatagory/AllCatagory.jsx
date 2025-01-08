@@ -7,7 +7,7 @@ const AllCatagory = () => {
     console.log(data);
 
     return (
-        <div >
+        <div className='' >
             <ul className="text-2xl text-black font-bold">
                 All Categories
                 <div className="ml-2.5 text-lg font-medium mt-5 text-center">
