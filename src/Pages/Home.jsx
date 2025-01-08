@@ -11,7 +11,7 @@ const Home = () => {
             <div className='w-10/12 mx-auto div-bg mt-6 p-2'>
                 {/* latest news flex start */}
                 <div className='flex  '>
-                    <button className="bg-color pt-3.5 pb-3.5 pl-7 pr-7 poppins-medium text-white hover:bg-pink-700">
+                    <button className="bg-pink-600 pt-3.5 pb-3.5 pl-7 pr-7 poppins-medium text-white hover:bg-pink-700">
                         Latest</button>
                     <div className='news-ticker-container'>
                         <div className='news-ticker'>

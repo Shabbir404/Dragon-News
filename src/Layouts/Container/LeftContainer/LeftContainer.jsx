@@ -1,7 +1,13 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import '../../../Coustom-styles/LeftContainer/Left-Container.css';
+import classImg from '../../../assets/class.png'
+import bgImg from '../../../assets/bg.png'
+import playgroundImg from '../../../assets/playground.png'
+import SwimmingImg from '../../../assets/swimming.png'
 const LeftContainer = () => {
     return (
         <div>
@@ -29,6 +35,47 @@ const LeftContainer = () => {
                     </div>
                 </div>
             </div>
+            <br />
+            <br />
+            <div className="">
+                <h1 className="Left-Container-font text-2xl text-black font-bold ml-2">Find Us On</h1>
+                <div className="">
+                    <div className="mt-5 border-gray-300 p-4 border rounded-md">
+                        <div className=" 
+                     mt-2 w-full rounded-lg flex justify-between font-bold items-center">
+                            <FaFacebook className="text-2xl"></FaFacebook>
+                            <button>Facebook</button>
+                            <br />
+                        </div>
+                        <hr className="mt-4" />
+                        <div className=" text-black 
+                     mt-2 w-full rounded-lg flex justify-between items-center font-bold">
+                            <FaSquareXTwitter className="text-2xl"></FaSquareXTwitter>
+                            <button>X</button>
+                            <br />
+                        </div>
+                        <hr className="mt-4 mb-4" />
+                        <div className=" 
+                     mt-2 w-full rounded-lg flex justify-between font-bold items-center">
+                            <FaInstagram className="text-2xl"></FaInstagram>
+                            <button >Instgram</button>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <div className="hidden md:block bg-color p-4 rounded-lg">
+                <h1 className="Left-Container-font text-2xl text-black font-bold ml-2">Q-Zone</h1>
+                <div className=" ml-2">
+                    <img src={SwimmingImg} alt="" />
+                    <img src={classImg} alt="" />
+                    <img src={playgroundImg} alt="" />
+                    <br />
+                    <img src={bgImg} alt="" />
+                </div>
+            </div>
+
         </div>
     );
 };

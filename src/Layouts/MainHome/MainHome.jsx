@@ -16,7 +16,7 @@ const MainHome = () => {
             </h1>
 
             <div className='mt-5'>
-                {data.slice(3, 10).map((item, i) => (
+                {data.slice(3, 6).map((item, i) => (
                     <div key={i} className="mb-8 bg-white rounded-lg shadow-md overflow-hidden">
 
                         <div className="p-2 post-text-box-color">
