@@ -9,6 +9,9 @@ import {
 import Root from './Layouts/Root/Root.jsx';
 import Home from './Pages/Home.jsx';
 import AllCategory from './Layouts/AllCatagory/AllCatagory.jsx';
+import About from './Pages/About/About.jsx';
+import Career from './Pages/Career/Career.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -31,6 +34,14 @@ const router = createBrowserRouter([
             });
         }
       },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/career',
+        element: <Career></Career>
+      }
     ]
   },
 ]);
