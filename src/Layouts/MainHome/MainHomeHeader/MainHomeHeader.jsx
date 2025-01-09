@@ -22,9 +22,11 @@ const MainHomeHeader = () => {
                         </Link>
                     </div>
                     <div className="flex items-center ml-auto">
-                        <button className="bg-gray-800 text-white px-2  py-2 hover:bg-gray-700 transition-colors">
+
+                        <Link to="/login" className="bg-gray-800 text-white px-2  py-2 hover:bg-gray-700 transition-colors">
                             Login
-                        </button>
+                        </Link>
+
                     </div>
                 </div>
 
@@ -50,9 +52,9 @@ const MainHomeHeader = () => {
                     <div className="flex justify-end">
                         <div className="flex items-center">
                             <MdAccountCircle className="text-4xl text-gray-700 mr-3" />
-                            <button className="bg-gray-800 text-white px-8 py-2 hover:bg-gray-700 transition-colors">
+                            <Link to="/login" className="bg-gray-800 text-white px-8 py-2 hover:bg-gray-700 transition-colors">
                                 Login
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

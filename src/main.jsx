@@ -11,6 +11,9 @@ import Home from './Pages/Home.jsx';
 import AllCategory from './Layouts/AllCatagory/AllCatagory.jsx';
 import About from './Pages/About/About.jsx';
 import Career from './Pages/Career/Career.jsx';
+import Login from './Pages/Login/Login.jsx';
+import SignUp from './Pages/SignUpPage/SignUp.jsx';
+import TermsPage from './Pages/TermsPage/TermsPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -41,6 +44,18 @@ const router = createBrowserRouter([
       {
         path: '/career',
         element: <Career></Career>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/terms-of-service',
+        element: <TermsPage></TermsPage>
       }
     ]
   },
