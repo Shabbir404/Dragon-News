@@ -8,7 +8,24 @@ import classImg from '../../../assets/class.png'
 import bgImg from '../../../assets/bg.png'
 import playgroundImg from '../../../assets/playground.png'
 import SwimmingImg from '../../../assets/swimming.png'
+import { Link } from "react-router-dom";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
 const LeftContainer = () => {
+
+    const googleProvider = new GoogleAuthProvider();
+    const googleSignIn = () => {
+        const auth = getAuth();
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            }).catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+            });
+    };
+
     return (
         <div>
             <div>
@@ -29,8 +46,9 @@ const LeftContainer = () => {
 
                     <div className=" text-red-600 border-red-700 p-2  border
                      mt-2 w-full rounded-lg flex justify-between items-center">
+
                         <FcGoogle className="text-2xl"></FcGoogle>
-                        <button >Login with Google</button>
+                        <button onClick={googleSignIn} >Login with Google</button>
                         <br />
                     </div>
                 </div>
